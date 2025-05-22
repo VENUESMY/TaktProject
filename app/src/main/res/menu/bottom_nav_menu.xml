@@ -9,10 +9,6 @@
         android:icon="@drawable/calendar_icon"
         android:title="Календарь" />
     <item
-        android:id="@+id/nav_add"
-        android:icon="@drawable/edit_icon"
-        android:title="Добавить" />
-    <item
         android:id="@+id/nav_sett"
         android:icon="@drawable/settings_icon"
         android:title="Настройки" />

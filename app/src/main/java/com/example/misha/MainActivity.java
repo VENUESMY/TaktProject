@@ -17,6 +17,7 @@ import com.example.misha.data.Priority;
 import com.example.misha.database.DbManager;
 import com.example.misha.fragments.AddEditTaskFragment;
 import com.example.misha.fragments.CalendarFragment;
+import com.example.misha.fragments.SettingsFragment;
 import com.example.misha.fragments.TaskListFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -47,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     selectedFragment = new TaskListFragment();
                 if (id == R.id.nav_calendar)
                     selectedFragment = new CalendarFragment();
-                if (id == R.id.nav_add)
-                    selectedFragment = new AddEditTaskFragment();
+                if (id == R.id.nav_sett)
+                    selectedFragment = new SettingsFragment();
                 loadFragment(selectedFragment);
                 return true;
             }

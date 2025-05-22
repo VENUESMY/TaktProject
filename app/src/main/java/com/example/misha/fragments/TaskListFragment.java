@@ -3,6 +3,7 @@ package com.example.misha.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,11 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.misha.R;
 import com.example.misha.adapters.TaskAdapter;
 import com.example.misha.data.Task;
 import com.example.misha.database.DbManager;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -22,6 +25,7 @@ public class TaskListFragment extends Fragment {
     private RecyclerView recyclerView;
     private TaskAdapter adapter;
     private DbManager dbManager;
+    private FloatingActionButton createButton;
 
 
     @Override
@@ -30,10 +34,18 @@ public class TaskListFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        createButton = view.findViewById(R.id.createActionButton);
 
         dbManager = new DbManager(getContext());
         dbManager.openDb();
         loadTasks();
+
+        createButton.setOnClickListener(v ->{
+            FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, new AddEditTaskFragment());
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
 
         return view;
     }
@@ -49,4 +61,8 @@ public class TaskListFragment extends Fragment {
         super.onDestroy();
         dbManager.closeDb();
     }
+    private void openCreater(){
+
+    }
+
 }
