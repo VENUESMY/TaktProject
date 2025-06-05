@@ -42,17 +42,19 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/date_button"
-                android:layout_width="0dp"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Дата" />
+                android:text="Дата"
+                app:cornerRadius="10dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/time_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Время" />
+                android:text="Время"
+                app:cornerRadius="10dp" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -61,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Сохранить"
+            app:cornerRadius="15dp"
             app:icon="@drawable/task_save" />
     </LinearLayout>
 
