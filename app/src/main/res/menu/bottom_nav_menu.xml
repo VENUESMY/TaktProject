@@ -8,8 +8,8 @@
         android:id="@+id/nav_calendar"
         android:icon="@drawable/calendar_icon"
         android:title="Календарь" />
-    <item
-        android:id="@+id/nav_sett"
-        android:icon="@drawable/settings_icon"
-        android:title="Настройки" />
+<!--    <item-->
+<!--        android:id="@+id/nav_sett"-->
+<!--        android:icon="@drawable/settings_icon"-->
+<!--        android:title="Настройки" />-->
 </menu>
